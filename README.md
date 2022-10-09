@@ -1,4 +1,5 @@
 # 🚀 Welcome to JD new awesome project!
+Clone this project from https://github.com/duynguyenjohnny/GRAS.git
 
 Install: 
 1. npm install
