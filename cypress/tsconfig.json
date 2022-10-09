@@ -1,9 +1,23 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../tsconfig.base.json",
   "files": [],
-  "include": ["**/*.ts", "plugins/index.js", "e2e/spec.cy.js"],
+  "include": [
+    "**/*.ts",
+    "plugins/index.js",
+    "e2e/spec.cy.js",
+    "src",
+    "./cypress.d.ts"
+  ],
   "compilerOptions": {
     "target": "ES6",
+    "outDir": "./build/",
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
     "noImplicitAny": false,
     "resolveJsonModule": true,
     "types": ["cypress", "node", "@badeball/cypress-cucumber-preprocessor"]
