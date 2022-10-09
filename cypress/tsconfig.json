@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": ["**/*.ts", "plugins/index.js", "e2e/spec.cy.js"],
+  "compilerOptions": {
+    "target": "ES6",
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "types": ["cypress", "node", "@badeball/cypress-cucumber-preprocessor"]
+  }
+}

@@ -1,0 +1,39 @@
+/* eslint-disable prettier/prettier */
+
+import { TEST_ENV_GLOBAL } from "../../../constants/testEnvGlobal";
+
+/**
+ * Documentation:
+ * This file is used to set all the different api paths
+ *  so they can be used in any test.
+ */
+const CONTENT_TYPE = "application/json";
+export const BACKEND_URL = Cypress.env().backendUrl;
+export const HUBSPOT_URL = Cypress.env().hubspotUrl;
+
+export const URIS = {
+  AUTH_SIGNIN: `${BACKEND_URL}api/v3/auth/signin`,
+  DISPATCHER_COMPANY_INFO: `${BACKEND_URL}api/v3/dispatcher/company`,
+  DISPATCHER_COMPANY_SETTING: `${BACKEND_URL}api/v3/dispatcher/company/settings`,
+};
+
+export const getBaseHeaders = () => {
+  return {
+    "content-type": CONTENT_TYPE,
+    company_slug: Cypress.env(TEST_ENV_GLOBAL.SLUG),
+  };
+};
+
+export const getHeadersUmbrella = () => {
+  return {
+    ...getBaseHeaders(),
+    authorization: `Bearer ${globalThis.APIJWTAccessToken}`,
+  };
+};
+
+export const getHeadersUmbrellaMobile = () => {
+  return {
+    ...getBaseHeaders(),
+    authorization: `${globalThis.APIJWTAccessTokenMobile}`,
+  };
+};
