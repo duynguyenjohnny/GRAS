@@ -16,7 +16,7 @@ Feature: User - Login
         Then I fill in the address form
         Then I click on submit
 
-    @ui  @login  @skip
+    @ui  @login
     Scenario: Exact same flow, but this time, add two items to your basket, click on checkout, add a new address, fill in the address form, click on submit.
         When I add 2 items to the basket
         Then I click on checkout
@@ -24,7 +24,7 @@ Feature: User - Login
         Then I fill in the address form
         Then I click on submit
 
-    @ui  @login  @skip
+    @ui  @login
     Scenario: Click on the search button, search for apple, verify that 2 apple products show up and that banana product doesn't show up
         When I search for apple
         Then I verify that 2 apple products show up and banana product doesn't show up
