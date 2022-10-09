@@ -4,7 +4,7 @@ Clone this project from https://github.com/duynguyenjohnny/GRAS.git
 Install: 
 1. npm install
 2. npm install @nrwl/react @nrwl/tao @nrwl/workspace @nrwl/cypress @nrwl/linter @nrwl/cli
-3. 
+
 ----
 npm audit fix --force
 
