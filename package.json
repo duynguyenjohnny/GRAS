@@ -49,9 +49,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    // "json": {
-    //   "enabled": true
-    // },
     "stepDefinitions": "cypress/support/step_definitions/**/*.{js,ts}"
   },
   "dependencies": {
